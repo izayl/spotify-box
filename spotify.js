@@ -28,18 +28,20 @@ const getAccessToken = async () => {
   })
   return resp.json()
 }
-const getTopTracks = async () => {
+exports.getTopTracks = async function getTopTracks() {
   const { access_token } = await getAccessToken()
 
-  return fetch(EndpointGetTopTopTracks, {
+  const resp = await fetch(`${EndpointGetTopTopTracks}?time_range=short_term`, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
   })
+
+  return resp.json()
 }
 
-;(async () => {
-  const resp = await getTopTracks()
-  const data = await resp.json()
-  console.log(data)
-})()
+// ;(async () => {
+//   const resp = await getTopTracks()
+//   const data = await resp.json()
+//   console.log(data)
+// })()
