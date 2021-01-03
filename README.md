@@ -14,23 +14,10 @@ This code was heavily inspired by [@jacc's music-box](https://github.com/jacc/mu
 ## 🎒 Prep Work
 
 1. Create a new public GitHub Gist (<https://gist.github.com/>)
-1. Create a token with the `gist` scope and copy it. (<https://github.com/settings/tokens/new>)
-1. Create a Spotify Application
-1. Copy the `API token`
+2. Create a token with the `gist` scope and copy it. (<https://github.com/settings/tokens/new>)
+3. Create a Spotify Application and get certified, detail steps you can see below.
 
-## 🖥 Project Setup
-
-1. Fork this repo
-2. Go to your fork's `Settings` > `Secrets` > `Add a new secret` for each environment secret (below)
-
-## 🤫 Environment Secrets
-
-- **GH_TOKEN:** The GitHub token generated above.
-- **SPOTIFY_CLIENT_ID:** The Client ID you got from Spotify Developer Dashboard, you can find detail action below.
-- **SPOTIFY_CLIENT_SECRET:** The Client Secret you got from Spotify Developer Dashboard, you can find detail action below
-- **SPOTIFY_REFRESH_TOKEN:** The Refresh Token you got from Spotify API, you can find detail action below
-
-<details><summary>Spotify Authorization Flow</summary>
+<details><summary>Spotify Authorization Steps</summary>
 <p>
 
 ### 1. Create new Spotify Application
@@ -79,6 +66,18 @@ if the response not return refresh_token, back to step 2 and retry.
 
 </p>
 </details>
+
+## 🖥 Project Setup
+
+1. Fork this repo
+2. Go to your fork's `Settings` > `Secrets` > `Add a new secret` for each environment secret (below)
+
+## 🤫 Environment Secrets
+
+- **GH_TOKEN:** The GitHub token generated above.
+- **SPOTIFY_CLIENT_ID:** The Client ID you got from Spotify Developer Dashboard.
+- **SPOTIFY_CLIENT_SECRET:** The Client Secret you got from Spotify Developer Dashboard.
+- **SPOTIFY_REFRESH_TOKEN:** The Refresh Token you got from Spotify API.
 
 ## 💸 Donations
 
