@@ -35,18 +35,16 @@ async function updateTopTracks(json) {
 
   const lines = []
   for (let index = 0; index < Math.min(tracks.length, 10); index++) {
-    const track = tracks[index]
-    const { name, artist } = track
-    const line = [
-      // truncate(name, 25).padEnd(35),
-      // truncate(artist, 15).padStart(5),
-      truncate(name, 25).padEnd(35 + name.length - eaw.length(name)),
-      truncate(artist, 18).padStart(20 + name.length - eaw.length(name)),
-    ]
-    lines.push(line.join(''))
-  }
+    let { name, artist } = tracks[index]
+    name = truncate(name, 25)
+    artist = truncate(artist, 19)
 
-  console.log(lines.join('\n'))
+    const line = [
+      name.padEnd(34 + name.length - eaw.length(name), '·'),
+      artist.padStart(20 + artist.length - eaw.length(artist), '·'),
+    ]
+    lines.push(line.join('|'))
+  }
 
   try {
     const filename = Object.keys(gist.data.files)[0]
@@ -66,13 +64,14 @@ async function updateTopTracks(json) {
   }
 }
 
-function truncate(str, n) {
-  const len = eaw.characterLength(str)
-  for (let i = n; i >= 0; i--) {
-    if (eaw.length(str) <= n + 2) break
+function truncate(str, len) {
+  // string longer than `len`
+  for (let i = len - 2; i >= 0; i--) {
+    if (eaw.length(str) <= len) break
     str = str.substring(0, i)
   }
-  return str
+
+  return str.trim()
 }
 
 ;(async () => {
