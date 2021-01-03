@@ -1,5 +1,5 @@
 <p align='center'>
-<!--   <img src=""> -->
+  <img width="400" src="https://user-images.githubusercontent.com/10740043/103472010-dc4d9c00-4dc2-11eb-88dd-732563d58e2f.png">
   <h3 align="center">spotify-box</h3>
   <p align="center">Update a gist to contain your weekly top tracks on Spotify.</p>
 </p>
@@ -74,6 +74,8 @@ the output may like this:
     "scope": "user-read-currently-playing user-top-read"
 }
 ```
+
+if the response not return refresh_token, back to step 2 and retry.
 
 </p>
 </details>
