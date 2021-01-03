@@ -40,10 +40,10 @@ async function updateTopTracks(json) {
     artist = truncate(artist, 19)
 
     const line = [
-      name.padEnd(34 + name.length - eaw.length(name), '·'),
-      artist.padStart(20 + artist.length - eaw.length(artist), '·'),
+      name.padEnd(34 + name.length - eaw.length(name)),
+      artist.padStart(20 + artist.length - eaw.length(artist)),
     ]
-    lines.push(line.join('|'))
+    lines.push(line.join(''))
   }
 
   try {
@@ -52,7 +52,7 @@ async function updateTopTracks(json) {
       gist_id,
       files: {
         [filename]: {
-          filename: '🎵 Spotify Top Track',
+          filename: '🎵 My Spotify Top Track',
           content: lines.join('\n'),
         },
       },
