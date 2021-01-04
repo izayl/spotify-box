@@ -1,7 +1,8 @@
 <p align='center'>
   <img width="400" src="https://user-images.githubusercontent.com/10740043/103472132-b0cbb100-4dc4-11eb-97a2-4261c4c5c4f5.png">
   <h3 align="center">spotify-box</h3>
-  <p align="center">Update a gist to contain your recent top tracks on Spotify.</p>
+  <p align="center">Automatic update pinned gist to show your recent Spotify top tracks.</p>
+  <p align="center"><sub>Don't forget to leave a ⭐ if you found this useful.</sub></p>
 </p>
 
 ---
