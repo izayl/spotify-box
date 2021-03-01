@@ -75,6 +75,7 @@ if the response not return refresh_token, back to step 2 and retry.
 
 ## 🤫 Environment Secrets
 
+- **GIST_ID:** The ID portion from your gist url `https://gist.github.com/<github username>/`**`6d5f84419863089a167387da62dd7081`**.
 - **GH_TOKEN:** The GitHub token generated above.
 - **SPOTIFY_CLIENT_ID:** The Client ID you got from Spotify Developer Dashboard.
 - **SPOTIFY_CLIENT_SECRET:** The Client Secret you got from Spotify Developer Dashboard.
