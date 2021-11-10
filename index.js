@@ -25,6 +25,7 @@ async function updateTopTracks(json) {
     console.error(
       `spotify-box ran into an issue for getting your gist:\n${error}`
     )
+    return
   }
 
   const tracks = json.items.map(item => ({
