@@ -23,7 +23,7 @@ async function updateTopTracks(json) {
     })
   } catch (error) {
     console.error(
-      `spotify-box ran into an issue for getting your gist:\n${error}`
+      `spotify-box ran into an issue for getting your gist ${gist_id}:\n${error}`
     )
     return
   }
