@@ -72,6 +72,8 @@ if the response not return refresh_token, back to step 2 and retry.
 
 1. Fork this repo
 2. Go to your fork's `Settings` > `Secrets` > `Add a new secret` for each environment secret (below)
+3. Enable Actions on your fork via the 'Actions' tab
+4. Enable the 'spotify-box' Workflow via the 'Actions' tab
 
 ## 🤫 Environment Secrets
 
