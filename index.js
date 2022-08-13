@@ -11,8 +11,23 @@ const octo = new Octokit({
 })
 
 async function main() {
+  envCheck()
   const json = await getTopTracks()
   await updateTopTracks(json)
+}
+
+async function envCheck() {
+  if (!GH_TOKEN || !GIST_ID) {
+    throw new Error(
+      `
+        spotify-box ran into an issue for getting your Environment Secrets
+        Please make sure you have the following Environment Secrets set:
+          GH_TOKEN
+          GIST_ID
+        For more information, see the README.md: https://github.com/izayl/spotify-box#-environment-secrets
+      `
+    )
+  }
 }
 
 async function updateTopTracks(json) {
@@ -25,7 +40,7 @@ async function updateTopTracks(json) {
     console.error(
       `spotify-box ran into an issue for getting your gist ${gist_id}:\n${error}`
     )
-    return
+    throw error
   }
 
   const tracks = json.items.map(item => ({
@@ -62,6 +77,7 @@ async function updateTopTracks(json) {
     console.error(
       `spotify-box ran into an issue for updating your gist:\n${error}`
     )
+    throw error
   }
 }
 
