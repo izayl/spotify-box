@@ -1,6 +1,6 @@
 {
   "name": "spotify-box",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Update a gist to contain your weekly top tracks on Spotify.",
   "main": "index.js",
   "repository": "git@github.com:izayl/Spotify-box.git",
@@ -10,6 +10,6 @@
     "@octokit/rest": "^18.0.12",
     "dotenv": "^8.2.0",
     "eastasianwidth": "^0.2.0",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.7"
   }
 }
