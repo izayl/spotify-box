@@ -3,7 +3,7 @@ author: izayl
 description: GitHub Action for Update a gist to contain your weekly top tracks on Spotify.
 
 runs:
-  using: node12
+  using: node16
   main: ./index.js
 
 branding:
