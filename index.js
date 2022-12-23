@@ -17,7 +17,7 @@ async function main() {
 }
 
 async function envCheck() {
-  if (!GH_TOKEN || !GIST_ID) {
+  if (!github_token || !gist_id) {
     throw new Error(
       `
         spotify-box ran into an issue for getting your Environment Secrets
