@@ -7,7 +7,7 @@ const { getTopTracks } = require('./spotify')
 const { GH_TOKEN: github_token, GIST_ID: gist_id } = process.env
 
 const octo = new Octokit({
-  auth: `${github_token}`,
+  auth: `token ${github_token}`,
 })
 
 async function main() {
@@ -36,6 +36,7 @@ async function updateTopTracks(json) {
     gist = await octo.gists.get({
       gist_id,
     })
+    // console.log('update success!')
   } catch (error) {
     console.error(
       `spotify-box ran into an issue for getting your gist ${gist_id}:\n${error}`
