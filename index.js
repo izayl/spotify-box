@@ -7,7 +7,7 @@ const { getTopTracks } = require('./spotify')
 const { GH_TOKEN: github_token, GIST_ID: gist_id } = process.env
 
 const octo = new Octokit({
-  auth: `${github_token}`,
+  auth: `token ${github_token}`,
 })
 
 async function main() {
